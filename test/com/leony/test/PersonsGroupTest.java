@@ -2,9 +2,10 @@ package com.leony.test;
 
 import com.leony.home.PersonFixtures;
 import com.leony.home.PersonsGroup;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class PersonsGroupTest {
     private PersonsGroup group;
@@ -16,37 +17,37 @@ public class PersonsGroupTest {
 
     @Test
     public void shouldCreateEmptyGroup() {
-        Assert.assertNotNull(group.getGroup());
+        assertNotNull(group.getGroup());
     }
 
     @Test
     public void shouldAddPerson() {
-        Assert.assertEquals(group.size(), 0);
+        assertEquals(group.size(), 0);
         group.add(PersonFixtures.me);
-        Assert.assertEquals(group.size(), 1);
-        Assert.assertTrue(group.contains(PersonFixtures.me));
+        assertEquals(group.size(), 1);
+        assertTrue(group.contains(PersonFixtures.me));
     }
 
     @Test
     public void shouldClearGroup() {
         group.add(PersonFixtures.me);
-        Assert.assertEquals(group.size(), 1);
+        assertEquals(group.size(), 1);
         group.clear();
-        Assert.assertEquals(group.size(), 0);
+        assertEquals(group.size(), 0);
     }
 
     @Test
     public void shouldReplacePerson() {
         group.add(PersonFixtures.me);
         group.replace(PersonFixtures.me, PersonFixtures.nelly);
-        Assert.assertTrue(group.contains(PersonFixtures.nelly));
+        assertTrue(group.contains(PersonFixtures.nelly));
     }
 
     @Test
     public void shouldNotReplacePerson() {
         group.add(PersonFixtures.me);
         group.replace(PersonFixtures.lisa, PersonFixtures.nelly);
-        Assert.assertFalse(group.contains(PersonFixtures.nelly));
+        assertFalse(group.contains(PersonFixtures.nelly));
     }
 
     @Test
@@ -56,6 +57,6 @@ public class PersonsGroupTest {
         group.add(PersonFixtures.lisa);
         group.add(PersonFixtures.mom);
         group.sort();
-        Assert.assertTrue(group.get(0).equals(PersonFixtures.lisa));
+        assertTrue(group.get(0).equals(PersonFixtures.lisa));
     }
 }

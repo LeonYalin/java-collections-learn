@@ -1,6 +1,7 @@
 package com.leony.app;
 
 import com.leony.home.CollectionsWithIterationOrder;
+import com.leony.home.CollectionsWithUniqueness;
 import com.leony.home.DefiningAndIteratingCollections;
 import com.leony.home.WhatAreCollections;
 
@@ -10,6 +11,7 @@ public class Main {
         whatAreCollections();
         definingAndIteratingCollections();
         collectionsWithIterationOrder();
+        collectionsWithUniqueness();
     }
 
     private static void whatAreCollections() {
@@ -33,6 +35,13 @@ public class Main {
         collectionsWithIterationOrder.tryListCommonMethods();
 
         printMessage("CollectionsWithIterationOrder: try TDD - try to run PersonsGroupTest class!");
+    }
+
+    private static void collectionsWithUniqueness() {
+        CollectionsWithUniqueness collectionsWithUniqueness = new CollectionsWithUniqueness();
+
+        printMessage("CollectionsWithUniqueness: play with sets");
+        collectionsWithUniqueness.playWithSets();
     }
 
     private static void printMessage(String msg) {

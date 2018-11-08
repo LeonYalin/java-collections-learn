@@ -1,6 +1,9 @@
 package com.leony.home;
 
+import java.util.Comparator;
+
 public class Person {
+    public static final Comparator<Person> BY_NAME_COMPARATOR = Comparator.comparing(Person::getName);
     private String name;
     private int age;
 
