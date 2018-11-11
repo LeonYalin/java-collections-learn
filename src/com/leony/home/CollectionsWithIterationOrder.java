@@ -6,10 +6,8 @@ import java.util.List;
 public class CollectionsWithIterationOrder {
     public void tryListCommonMethods() {
         List<Person> persons = new ArrayList<>();
-        Person me = new Person("Leon Yalin", 32);
-        Person nelly = new Person("Nelly Yalin", 30);
-        persons.add(me);
-        persons.add(nelly);
+        persons.add(PersonFixtures.me);
+        persons.add(PersonFixtures.nelly);
 
         System.out.println("Use list get() method: element at index 1 " + persons.get(1));
 

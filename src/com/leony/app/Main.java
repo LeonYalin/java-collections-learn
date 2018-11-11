@@ -1,9 +1,6 @@
 package com.leony.app;
 
-import com.leony.home.CollectionsWithIterationOrder;
-import com.leony.home.CollectionsWithUniqueness;
-import com.leony.home.DefiningAndIteratingCollections;
-import com.leony.home.WhatAreCollections;
+import com.leony.home.*;
 
 public class Main {
 
@@ -12,6 +9,7 @@ public class Main {
         definingAndIteratingCollections();
         collectionsWithIterationOrder();
         collectionsWithUniqueness();
+        collectionsWithModificationOrder();
     }
 
     private static void whatAreCollections() {
@@ -34,7 +32,7 @@ public class Main {
         printMessage("CollectionsWithIterationOrder: try list common methods");
         collectionsWithIterationOrder.tryListCommonMethods();
 
-        printMessage("CollectionsWithIterationOrder: try TDD - try to run PersonsGroupTest class!");
+        printMessage("CollectionsWithIterationOrder: -= TDD =- try to run PersonsGroupTest class!");
     }
 
     private static void collectionsWithUniqueness() {
@@ -42,6 +40,16 @@ public class Main {
 
         printMessage("CollectionsWithUniqueness: play with sets");
         collectionsWithUniqueness.playWithSets();
+    }
+
+    private static void collectionsWithModificationOrder() {
+        CollectionsWithModificationOrder collectionsWithModificationOrder = new CollectionsWithModificationOrder();
+
+        printMessage("CollectionsWithModificationOrder: play with queues");
+        collectionsWithModificationOrder.playWithQueues();
+
+        printMessage("CollectionsWithModificationOrder: play with deques");
+        collectionsWithModificationOrder.playWithDeques();
     }
 
     private static void printMessage(String msg) {
