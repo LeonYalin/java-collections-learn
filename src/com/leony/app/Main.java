@@ -10,6 +10,7 @@ public class Main {
         collectionsWithIterationOrder();
         collectionsWithUniqueness();
         collectionsWithModificationOrder();
+        collectionsOfPairs();
     }
 
     private static void whatAreCollections() {
@@ -50,6 +51,21 @@ public class Main {
 
         printMessage("CollectionsWithModificationOrder: play with deques");
         collectionsWithModificationOrder.playWithDeques();
+    }
+
+    private static void collectionsOfPairs() {
+        CollectionsOfPairs collectionsOfPairs = new CollectionsOfPairs();
+
+        printMessage("CollectionsOfPairs: -= TDD =- try to run PersonOrdersTest class!");
+
+        printMessage("CollectionsOfPairs: play with maps");
+        collectionsOfPairs.playWithMaps();
+
+        printMessage("CollectionsOfPairs: play with sorted maps");
+        collectionsOfPairs.playWithSortedMaps();
+
+        printMessage("CollectionsOfPairs: Java 8 enhancements");
+        collectionsOfPairs.java8Enhancements();
     }
 
     private static void printMessage(String msg) {
