@@ -11,6 +11,7 @@ public class Main {
         collectionsWithUniqueness();
         collectionsWithModificationOrder();
         collectionsOfPairs();
+        collectionOperations();
     }
 
     private static void whatAreCollections() {
@@ -66,6 +67,19 @@ public class Main {
 
         printMessage("CollectionsOfPairs: Java 8 enhancements");
         collectionsOfPairs.java8Enhancements();
+    }
+
+    private static void collectionOperations() {
+        CollectionOperations collectionOperations = new CollectionOperations();
+
+        printMessage("CollectionOperations: collection algorithms");
+        collectionOperations.collectionAlgorithms();
+
+        printMessage("CollectionOperations: collection factories");
+        collectionOperations.collectionFactories();
+
+        printMessage("CollectionOperations: collection utilities");
+        collectionOperations.collectionUtilities();
     }
 
     private static void printMessage(String msg) {

@@ -4,6 +4,7 @@ import java.util.Comparator;
 
 public class Person {
     public static final Comparator<Person> BY_NAME_COMPARATOR = Comparator.comparing(Person::getName);
+    public static final Comparator<Person> BY_AGE_COMPARATOR = Comparator.comparing(Person::getAge);
     private String name;
     private int age;
 

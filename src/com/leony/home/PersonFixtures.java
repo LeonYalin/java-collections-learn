@@ -25,4 +25,12 @@ public class PersonFixtures {
         womenLeader.getGroup().add(lisa);
         womenLeader.getGroup().add(mom);
     }
+
+    public static void reset() {
+        me = new Person("Leon Yalin", 32);
+        nelly = new Person("Nelly Yalin", 30);
+        lisa = new Person("Lisa Yalin", 0);
+        mom = new Person("Inna Yalin", 55);
+        defaultPerson = new Person("Default person", 99);
+    }
 }
